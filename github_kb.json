@@ -1,0 +1,44 @@
+[
+  {
+    "id": "repo-create-001",
+    "feature": "Create a new repository",
+    "description": "How to create a brand new Git repository on GitHub.",
+    "keywords": ["new repository", "create repo", "start project", "git init", "make repository"],
+    "steps": [
+      "Log in to GitHub and click the '+' icon in the top-right corner.",
+      "Select 'New repository'.",
+      "Enter a repository name and an optional description.",
+      "Choose to make the repository Public or Private.",
+      "Click 'Create repository'."
+    ],
+    "url": "https://docs.github.com/en/get-started/quickstart/create-a-repo"
+  },
+  {
+    "id": "pr-create-001",
+    "feature": "Create a Pull Request",
+    "description": "Proposing changes to a repository by creating a pull request.",
+    "keywords": ["pull request", "pr", "merge code", "propose changes"],
+    "steps": [
+      "Navigate to the main page of the repository.",
+      "In the 'Branch' menu, choose the branch that contains your commits.",
+      "Above the file list, click 'Compare & pull request'.",
+      "Type a title and description for your pull request.",
+      "Click 'Create pull request'."
+    ],
+    "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request"
+  },
+  {
+    "id": "actions-setup-001",
+    "feature": "Set up GitHub Actions",
+    "description": "How to create a new GitHub Actions workflow to automate CI/CD.",
+    "keywords": ["github actions", "ci/cd", "workflow", "automation", "pipeline"],
+    "steps": [
+      "Navigate to your repository on GitHub.",
+      "Click on the 'Actions' tab under your repository name.",
+      "Search for a workflow template that matches your project, or click 'set up a workflow yourself'.",
+      "Edit the workflow YAML file according to your automation needs.",
+      "Click 'Commit changes' to save the workflow to your `.github/workflows` directory."
+    ],
+    "url": "https://docs.github.com/en/actions/quickstart"
+  }
+]
