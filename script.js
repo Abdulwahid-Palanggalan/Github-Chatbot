@@ -4,7 +4,6 @@ const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
 const chatArea = document.getElementById('chat-area');
 const sendBtn = document.getElementById('send-btn');
-const quickActionsContainer = document.getElementById('quick-actions');
 
 let extractor = null;
 let kbIndexed = [];
@@ -18,7 +17,7 @@ function appendMessage(content, sender, isMarkdown = false) {
     if (isMarkdown) {
         msgDiv.innerHTML = marked.parse(content);
     } else {
-        msgDiv.textContent = content;
+        msgDiv.innerHTML = content; // Allows safe HTML injections for FAQs
     }
     
     chatArea.appendChild(msgDiv);
@@ -73,7 +72,7 @@ async function initializeAI() {
         isReady = true;
         userInput.disabled = false;
         sendBtn.disabled = false;
-        loadQuickActions();
+        showFAQs();
         userInput.focus();
         
     } catch (err) {
@@ -109,28 +108,32 @@ function generateResponse(matchedEntry) {
     return response;
 }
 
-// Generate Quick Action Chips dynamically
-function loadQuickActions() {
-    quickActionsContainer.innerHTML = '';
+// Render FAQ choices inside the chat
+function showFAQs() {
+    const faqQuestions = [
+        "How do I create a repository?",
+        "How do I commit changes?",
+        "How do I create a pull request?",
+        "What is the typical GitHub workflow?",
+        "How do I resolve merge conflicts?"
+    ];
     
-    // Pick 4 random categories from our available local knowledge base
-    const shuffled = [...kbIndexed].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 4);
-    
-    selected.forEach(entry => {
-        const btn = document.createElement('button');
-        btn.classList.add('chip');
-        btn.textContent = entry.feature;
-        btn.type = 'button';
-        btn.onclick = () => {
-            if (!isReady) return;
-            // Write to input and dispatch submit event
-            userInput.value = "How to " + entry.feature.toLowerCase() + "?";
-            chatForm.dispatchEvent(new Event('submit'));
-        };
-        quickActionsContainer.appendChild(btn);
+    let html = "Here are some **Frequently Asked Questions** you can ask me:<br>";
+    html += "<div class='faq-list'>";
+    faqQuestions.forEach(q => {
+        html += `<button class="faq-btn" onclick="submitFaq('${q}')">${q}</button>`;
     });
+    html += "</div>";
+    
+    appendMessage(html, "bot", false);
 }
+
+// Global scope to allow HTML onclick access
+window.submitFaq = function(question) {
+    if (!isReady) return;
+    userInput.value = question;
+    chatForm.dispatchEvent(new Event('submit'));
+};
 
 // Intercept Chat Form Submit
 chatForm.addEventListener('submit', async (e) => {
