@@ -47,7 +47,6 @@ function removeTyping() {
 
 async function initializeAI() {
     showTyping();
-    appendMessage("Initializing lightweight AI model right in your browser! This executes totally offline and happens only once... 🚀", "bot");
     
     try {
         // Download and load model locally in browser WebAssembly
@@ -69,7 +68,7 @@ async function initializeAI() {
         
         
         removeTyping();
-        appendMessage("✨ AI Model initialized! Knowledge base vector indexing complete. How can I help you?", "bot");
+        appendMessage("✨ AI Model initialized! How can I help you?", "bot");
         
         isReady = true;
         userInput.disabled = false;
