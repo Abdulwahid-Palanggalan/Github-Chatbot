@@ -7,6 +7,21 @@ const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
 const chatArea = document.getElementById('chat-area');
 const sendBtn = document.getElementById('send-btn');
+const themeToggle = document.getElementById('theme-toggle');
+
+// Handle Dark/Light Theme Toggling
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'light') {
+    document.body.classList.add('light-mode');
+    themeToggle.innerHTML = '🌙';
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    themeToggle.innerHTML = isLight ? '🌙' : '☀️';
+});
 
 let extractor = null;
 let kbIndexed = [];

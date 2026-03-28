@@ -11,6 +11,19 @@
     --bot-msg-bg: rgba(33, 38, 45, 0.8);
 }
 
+body.light-mode {
+    --bg-color: #f6f8fa;
+    --text-primary: #1F2328;
+    --text-secondary: #656d76;
+    --accent: #0969da;
+    --accent-glow: rgba(9, 105, 218, 0.3);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(208, 215, 222, 0.5);
+    
+    --user-msg-bg: #0969da;
+    --bot-msg-bg: rgba(255, 255, 255, 0.9);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -105,6 +118,24 @@ body {
 
 .github-icon {
     color: var(--text-primary);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(128, 128, 128, 0.15);
 }
 
 h1 {
