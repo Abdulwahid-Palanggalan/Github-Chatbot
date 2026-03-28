@@ -50,9 +50,7 @@ async function initializeAI() {
     
     try {
         // Download and load model locally in browser WebAssembly
-        extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
-            revision: 'default'
-        });
+        extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
         
         // Fetch Knowledge Base
         const response = await fetch('./github_kb.json');
@@ -89,11 +87,23 @@ function generateResponse(matchedEntry) {
         return "Sorry, I don't have information on that in my structured dataset. Please check GitHub Docs: [https://docs.github.com/](https://docs.github.com/)";
     }
     
-    let response = `### ${matchedEntry.feature}\n\nHere are the instructions to help you:\n`;
-    matchedEntry.steps.forEach((step, index) => {
-        response += `${index + 1}. ${step}\n`;
-    });
-    response += `\n**Official Documentation**: [Link](${matchedEntry.url})`;
+    let response = `### ${matchedEntry.feature}\n\n`;
+    
+    if (matchedEntry.content) {
+        // If content is already pre-formatted in markdown string form
+        response += matchedEntry.content + '\n';
+    } else if (matchedEntry.steps) {
+        // Fallback for old knowledge base steps format
+        response += `Here are the instructions to help you:\n\n`;
+        matchedEntry.steps.forEach((step, index) => {
+            response += `${index + 1}. ${step}\n`;
+        });
+    }
+    
+    if (matchedEntry.url) {
+        response += `\n**Official Documentation**: [Link](${matchedEntry.url})`;
+    }
+    
     return response;
 }
 

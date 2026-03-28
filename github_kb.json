@@ -1,44 +1,72 @@
 [
   {
-    "id": "repo-create-001",
-    "feature": "Create a new repository",
-    "description": "How to create a brand new Git repository on GitHub.",
-    "keywords": ["new repository", "create repo", "start project", "git init", "make repository"],
-    "steps": [
-      "Log in to GitHub and click the '+' icon in the top-right corner.",
-      "Select 'New repository'.",
-      "Enter a repository name and an optional description.",
-      "Choose to make the repository Public or Private.",
-      "Click 'Create repository'."
-    ],
-    "url": "https://docs.github.com/en/get-started/quickstart/create-a-repo"
+    "id": "q1",
+    "feature": "Create a repository",
+    "description": "How to create a repository on the Web or GitHub Desktop.",
+    "keywords": ["create", "repository", "new repo", "start project", "init"],
+    "content": "**Web:**\n1. Log in to GitHub\n2. Click \"+\" → New repository\n3. Enter repository name\n4. Choose Public or Private\n5. Click Create repository\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Click File → New Repository\n3. Enter name and local path\n4. Click Create Repository\n5. Click Publish repository"
   },
   {
-    "id": "pr-create-001",
-    "feature": "Create a Pull Request",
-    "description": "Proposing changes to a repository by creating a pull request.",
-    "keywords": ["pull request", "pr", "merge code", "propose changes"],
-    "steps": [
-      "Navigate to the main page of the repository.",
-      "In the 'Branch' menu, choose the branch that contains your commits.",
-      "Above the file list, click 'Compare & pull request'.",
-      "Type a title and description for your pull request.",
-      "Click 'Create pull request'."
-    ],
-    "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request"
+    "id": "q2",
+    "feature": "Clone a repository",
+    "description": "How to clone a repository on the Terminal or GitHub Desktop.",
+    "keywords": ["clone", "download", "copy repo", "get code", "git clone"],
+    "content": "**Terminal (Command Line):**\n1. Open repository on GitHub\n2. Click Code\n3. Copy HTTPS or SSH URL\n4. Run:\n```bash\ngit clone <repo-url>\n```\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Click File → Clone Repository\n3. Select repo or paste URL\n4. Choose location\n5. Click Clone"
   },
   {
-    "id": "actions-setup-001",
-    "feature": "Set up GitHub Actions",
-    "description": "How to create a new GitHub Actions workflow to automate CI/CD.",
-    "keywords": ["github actions", "ci/cd", "workflow", "automation", "pipeline"],
-    "steps": [
-      "Navigate to your repository on GitHub.",
-      "Click on the 'Actions' tab under your repository name.",
-      "Search for a workflow template that matches your project, or click 'set up a workflow yourself'.",
-      "Edit the workflow YAML file according to your automation needs.",
-      "Click 'Commit changes' to save the workflow to your `.github/workflows` directory."
-    ],
-    "url": "https://docs.github.com/en/actions/quickstart"
+    "id": "q3",
+    "feature": "Commit changes",
+    "description": "How to commit and push changes on the Terminal or GitHub Desktop.",
+    "keywords": ["commit", "save changes", "git add", "git commit", "push"],
+    "content": "**Terminal (Command Line):**\n```bash\ngit status                 # Check what files you have modified\ngit add .                  # Stage all your modified files\ngit commit -m \"message\"    # Save your changes locally with a note\ngit push                   # Upload your saved changes to GitHub\n```\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Select repository\n3. Add commit message\n4. Click Commit to main\n5. Click Push origin"
+  },
+  {
+    "id": "q4",
+    "feature": "Create a branch",
+    "description": "How to create a new branch on the Web or GitHub Desktop.",
+    "keywords": ["branch", "create branch", "new branch", "checkout -b"],
+    "content": "**Web:**\n1. Open repository\n2. Click branch dropdown\n3. Type branch name\n4. Click Create branch\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Click Current Branch\n3. Click New Branch\n4. Enter branch name\n5. Click Create Branch"
+  },
+  {
+    "id": "q5",
+    "feature": "Switch branches",
+    "description": "How to switch to a different branch on the Terminal or GitHub Desktop.",
+    "keywords": ["switch branch", "checkout", "change branch"],
+    "content": "**Terminal (Command Line):**\n```bash\ngit checkout branch-name   # Switches your local code to the branch\n# Or, using the newer command:\n# git switch branch-name\n```\n\n**Desktop:**\n1. Click Current Branch\n2. Select branch"
+  },
+  {
+    "id": "q6",
+    "feature": "Push changes",
+    "description": "How to push changes to the remote repository on the Terminal or GitHub Desktop.",
+    "keywords": ["push", "upload changes", "git push"],
+    "content": "**Terminal (Command Line):**\n```bash\n# If you just created the branch locally, you MUST set the upstream tracking:\ngit push -u origin branch-name\n\n# Or, if the branch already exists online:\ngit push origin branch-name\n```\n\n**Desktop:**\n* Click Push origin (or Publish branch)"
+  },
+  {
+    "id": "q7",
+    "feature": "Pull changes",
+    "description": "How to fetch and pull updates from the remote repository on the Terminal or GitHub Desktop.",
+    "keywords": ["pull", "fetch", "get updates", "git pull", "sync"],
+    "content": "**Terminal (Command Line):**\n```bash\ngit pull origin main       # Fetch and merge updates from the remote\n```\n\n**Desktop:**\n1. Click Fetch origin\n2. Click Pull origin"
+  },
+  {
+    "id": "q8",
+    "feature": "Create a pull request",
+    "description": "How to create a pull request (PR) on the Web or GitHub Desktop.",
+    "keywords": ["pull request", "pr", "merge code", "propose changes", "create pr"],
+    "content": "**Web:**\n1. Push branch\n2. Click Compare & pull request\n3. Add title & description\n4. Click Create pull request\n*(Note: If you don't own the repository but want to contribute, you must click \"Fork\" in the top right corner before doing these steps!)*\n\n**Desktop:**\n1. Push branch\n2. Click Create Pull Request\n3. Complete the request in your browser"
+  },
+  {
+    "id": "q9",
+    "feature": "Merge changes",
+    "description": "How to merge a pull request on the Web or GitHub Desktop.",
+    "keywords": ["merge", "pull request", "combine changes", "merge pr"],
+    "content": "**Web:**\n1. Open pull request\n2. Click Merge\n3. Confirm\n\n**Desktop:**\n1. Open repository in browser\n2. Merge pull request\n3. Return to Desktop and pull updates"
+  },
+  {
+    "id": "q10",
+    "feature": "Resolve merge conflicts",
+    "description": "How to fix merge conflicts on the Terminal or GitHub Desktop.",
+    "keywords": ["merge conflict", "resolve conflicts", "fix conflicts", "git conflict"],
+    "content": "**Terminal (Command Line):**\n1. Open conflicted files in your editor (like VS Code).\n2. Fix conflicts (Keep Current, Accept Incoming, or manually remove `<<<<<<<`, `=======`, `>>>>>>>` markers).\n3. Once resolved, run in your terminal:\n```bash\ngit status                 # Verify you have fixed the conflicts\ngit add .                  # Stage the resolved files\ngit commit                 # Complete the merge process\ngit push                   # Upload to GitHub\n```\n\n**Desktop:**\n1. Open repository\n2. Review conflicted files with warning signs\n3. Click Open in editor and fix the conflicts\n4. Click Mark resolved inside GitHub Desktop\n5. Finally, Commit and push"
   }
 ]
