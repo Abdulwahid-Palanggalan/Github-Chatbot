@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-width=1.0">
     <title>GitHub Knowledge Bot</title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2f81f7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -47,5 +49,14 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script type="module" src="./script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(() => console.log('Service Worker Registered for offline use!'))
+                    .catch(e => console.error('SW Registration failed:', e));
+            });
+        }
+    </script>
 </body>
 </html>

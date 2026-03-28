@@ -1,0 +1,16 @@
+{
+  "name": "GitHub Knowledge Bot",
+  "short_name": "GH Bot",
+  "description": "100% Free, Local, and Offline GitHub Chatbot",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#2f81f7",
+  "icons": [
+    {
+      "src": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
