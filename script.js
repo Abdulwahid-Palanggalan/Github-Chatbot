@@ -4,6 +4,7 @@ const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
 const chatArea = document.getElementById('chat-area');
 const sendBtn = document.getElementById('send-btn');
+const quickActionsContainer = document.getElementById('quick-actions');
 
 let extractor = null;
 let kbIndexed = [];
@@ -66,12 +67,14 @@ async function initializeAI() {
             });
         }
         
+        
         removeTyping();
         appendMessage("✨ AI Model initialized! Knowledge base vector indexing complete. How can I help you?", "bot");
         
         isReady = true;
         userInput.disabled = false;
         sendBtn.disabled = false;
+        loadQuickActions();
         userInput.focus();
         
     } catch (err) {
@@ -105,6 +108,29 @@ function generateResponse(matchedEntry) {
     }
     
     return response;
+}
+
+// Generate Quick Action Chips dynamically
+function loadQuickActions() {
+    quickActionsContainer.innerHTML = '';
+    
+    // Pick 4 random categories from our available local knowledge base
+    const shuffled = [...kbIndexed].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 4);
+    
+    selected.forEach(entry => {
+        const btn = document.createElement('button');
+        btn.classList.add('chip');
+        btn.textContent = entry.feature;
+        btn.type = 'button';
+        btn.onclick = () => {
+            if (!isReady) return;
+            // Write to input and dispatch submit event
+            userInput.value = "How to " + entry.feature.toLowerCase() + "?";
+            chatForm.dispatchEvent(new Event('submit'));
+        };
+        quickActionsContainer.appendChild(btn);
+    });
 }
 
 // Intercept Chat Form Submit

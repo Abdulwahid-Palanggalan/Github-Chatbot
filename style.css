@@ -244,6 +244,42 @@ h1 {
     background: rgba(22, 27, 34, 0.4);
 }
 
+.quick-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.quick-actions::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.chip {
+    white-space: nowrap;
+    background: rgba(47, 129, 247, 0.15);
+    border: 1px solid rgba(47, 129, 247, 0.3);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.chip:hover {
+    background: rgba(47, 129, 247, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.chip:active {
+    transform: translateY(0);
+}
+
 .glass-form {
     display: flex;
     gap: 12px;
