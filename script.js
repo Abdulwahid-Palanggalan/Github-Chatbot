@@ -1,4 +1,7 @@
-import { pipeline, cos_sim } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.1';
+import { pipeline, cos_sim, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.1';
+
+// Prevent transformers.js from searching for the models locally (which causes 404 errors)
+env.allowLocalModels = false;
 
 const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
