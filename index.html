@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>GitHub Knowledge Bot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="blob-wrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div class="app-container">
+        <header class="glass-header">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="github-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12A9.998 9.998 0 0 0 8.838 21.488C9.338 21.575 9.525 21.275 9.525 21.013C9.525 20.775 9.513 19.95 9.513 18.888C6.738 19.488 6.15 17.55 6.15 17.55C5.688 16.4 5.038 16.088 5.038 16.088C4.138 15.463 5.113 15.488 5.113 15.488C6.113 15.563 6.638 16.513 6.638 16.513C7.525 18.025 8.963 17.588 9.563 17.338C9.65 16.663 9.925 16.213 10.238 15.963C8.025 15.713 5.7 14.85 5.7 11.088C5.7 10.013 6.075 9.138 6.7 8.438C6.6 8.188 6.275 7.188 6.8 5.863C6.8 5.863 7.613 5.6 9.525 6.9C10.3 6.688 11.163 6.575 12 6.575C12.838 6.575 13.7 6.688 14.475 6.9C16.388 5.6 17.2 5.863 17.2 5.863C17.725 7.188 17.4 8.188 17.3 8.438C17.925 9.138 18.3 10.013 18.3 11.088C18.3 14.863 15.963 15.713 13.738 15.963C14.125 16.3 14.463 16.95 14.463 18.013C14.463 19.538 14.45 20.763 14.45 21.013C14.45 21.275 14.638 21.588 15.15 21.488C21.988 19.225 22 12.013 22 12C22 6.475 17.525 2 12 2Z" fill="currentColor"/>
+                </svg>
+                <h1>GitHub Knowledge</h1>
+            </div>
+            <p class="subtitle">100% Free & Serverless</p>
+        </header>
+
+        <main class="chat-area" id="chat-area">
+            <div class="message system-message">
+                Ask me questions about GitHub features and workflows! I run entirely in your browser using WebAssembly. No backend required!
+            </div>
+        </main>
+
+        <footer class="input-area">
+            <form id="chat-form" class="glass-form">
+                <input type="text" id="user-input" placeholder="How do I create a pull request?" autocomplete="off" required disabled />
+                <button type="submit" class="send-btn" id="send-btn" disabled>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </form>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
