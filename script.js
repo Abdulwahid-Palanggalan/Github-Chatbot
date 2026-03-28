@@ -118,7 +118,7 @@ function showFAQs() {
         "How do I create a branch?",
         "How do I add a collaborator?",
         "How do I clone a repository?",
-        "How do I undo the last commit?"
+        "How do I create a pull request?"
     ];
     
     let html = "Here are some FAQ's you can ask me:<br>";
