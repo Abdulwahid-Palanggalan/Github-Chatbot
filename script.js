@@ -115,13 +115,13 @@ function generateResponse(matchedEntry) {
 function showFAQs() {
     const faqQuestions = [
         "How do I create a repository?",
-        "How do I commit changes?",
-        "How do I create a pull request?",
-        "What is the typical GitHub workflow?",
-        "How do I resolve merge conflicts?"
+        "How do I create a branch?",
+        "How do I add a collaborator?",
+        "How do I clone a repository?",
+        "How do I undo the last commit?"
     ];
     
-    let html = "Here are some **Frequently Asked Questions** you can ask me:<br>";
+    let html = "Here are some FAQ's you can ask me:<br>";
     html += "<div class='faq-list'>";
     faqQuestions.forEach(q => {
         html += `<button class="faq-btn" onclick="submitFaq('${q}')">${q}</button>`;
