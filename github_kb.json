@@ -58,9 +58,9 @@
   {
     "id": "q9",
     "feature": "Merge changes",
-    "description": "How to merge a pull request on the Web or GitHub Desktop.",
+    "description": "How to merge a pull request on the Web.",
     "keywords": ["merge", "pull request", "combine changes", "merge pr"],
-    "content": "**Web:**\n1. Open pull request\n2. Click Merge\n3. Confirm\n\n**Desktop:**\n1. Open repository in browser\n2. Merge pull request\n3. Return to Desktop and pull updates"
+    "content": "**Web:**\n1. Open pull request\n2. Click Merge\n3. Confirm"
   },
   {
     "id": "q10",
