@@ -1,72 +1,331 @@
 [
   {
     "id": "q1",
+    "feature": "How do I create a GitHub account?",
+    "description": "Steps to create a new GitHub account.",
+    "keywords": ["create account", "sign up", "register", "new account", "join"],
+    "content": "1. Go to GitHub website\n2. Click Sign up\n3. Enter email, username, and password\n4. Verify your email\n5. Log in to your account"
+  },
+  {
+    "id": "q2",
+    "feature": "How do I install Git?",
+    "description": "Steps to download and install Git.",
+    "keywords": ["install git", "download git", "setup git", "git installation"],
+    "content": "1. Download Git from the official website\n2. Run the installer\n3. Click Next until installation finishes\n4. Open terminal\n5. Type:\n```bash\ngit --version\n```"
+  },
+  {
+    "id": "q3",
+    "feature": "How do I connect GitHub Desktop to GitHub?",
+    "description": "Steps to sign in and connect GitHub Desktop.",
+    "keywords": ["connect desktop", "login github desktop", "sign in desktop", "link account"],
+    "content": "1. Open GitHub Desktop\n2. Click File → Options → Accounts\n3. Click Sign in to GitHub\n4. Log in to your account\n5. Your account is now connected"
+  },
+  {
+    "id": "q4",
+    "feature": "How do I configure Git (username/email)?",
+    "description": "Configure your Git author name and email address.",
+    "keywords": ["configure git", "git config", "set username", "set email", "author identity"],
+    "content": "Run these terminal commands:\n```bash\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your@email.com\"\n```"
+  },
+  {
+    "id": "q5",
+    "feature": "What is HTTPS vs SSH?",
+    "description": "Difference between accessing repositories via HTTPS vs SSH.",
+    "keywords": ["https", "ssh", "difference", "connection type", "secure", "token"],
+    "content": "**HTTPS** – uses username/password or token (easier for beginners)\n**SSH** – uses SSH keys (more secure, no need to log in repeatedly)"
+  },
+  {
+    "id": "old_q1",
     "feature": "Create a repository",
     "description": "How to create a repository on the Web or GitHub Desktop.",
     "keywords": ["create", "repository", "new repo", "start project", "init"],
     "content": "**Web:**\n1. Log in to GitHub\n2. Click \"+\" → New repository\n3. Enter repository name\n4. Choose Public or Private\n5. Click Create repository\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Click File → New Repository\n3. Enter name and local path\n4. Click Create Repository\n5. Click Publish repository"
   },
   {
-    "id": "q2",
+    "id": "old_q2",
     "feature": "Clone a repository",
     "description": "How to clone a repository on the Terminal or GitHub Desktop.",
     "keywords": ["clone", "download", "copy repo", "get code", "git clone"],
     "content": "**Terminal (Command Line):**\n1. Open repository on GitHub\n2. Click Code\n3. Copy HTTPS or SSH URL\n4. Run:\n```bash\ngit clone <repo-url>\n```\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Click File → Clone Repository\n3. Select repo or paste URL\n4. Choose location\n5. Click Clone"
   },
   {
-    "id": "q3",
+    "id": "q8",
+    "feature": "How do I upload files?",
+    "description": "Adding files to your repository on Web or Desktop.",
+    "keywords": ["upload files", "add files", "save files", "put files"],
+    "content": "**Web:**\n1. Click Add file → Upload files\n2. Drag and drop files\n3. Commit changes\n\n**Desktop:**\n1. Copy files into repository folder\n2. Open GitHub Desktop\n3. Commit changes\n4. Push"
+  },
+  {
+    "id": "q9",
+    "feature": "How do I download a repository as ZIP?",
+    "description": "Downloading the raw master codes as a zip file.",
+    "keywords": ["download zip", "download repo", "get files", "zip file"],
+    "content": "1. Open repository\n2. Click Code\n3. Click Download ZIP"
+  },
+  {
+    "id": "q10",
+    "feature": "How do I change repository visibility (public/private)?",
+    "description": "Switching your repository from public to private or vice versa.",
+    "keywords": ["change visibility", "make private", "make public", "hide repo", "settings"],
+    "content": "1. Go to Settings\n2. Scroll to visibility section\n3. Select Public or Private\n4. Save changes"
+  },
+  {
+    "id": "q11",
+    "feature": "How do I rename a repository?",
+    "description": "Changing the name of a GitHub repository.",
+    "keywords": ["rename repo", "change name", "edit name"],
+    "content": "1. Go to Settings\n2. Edit repository name\n3. Click Save"
+  },
+  {
+    "id": "q12",
+    "feature": "How do I initialize a repository with a README?",
+    "description": "Starting a new repository with a README checklist.",
+    "keywords": ["add readme", "initialize with readme", "starting files"],
+    "content": "1. Create a repository\n2. Check Add a README file\n3. Click Create repository"
+  },
+  {
+    "id": "old_q3",
     "feature": "Commit changes",
     "description": "How to commit and push changes on the Terminal or GitHub Desktop.",
     "keywords": ["commit", "save changes", "git add", "git commit", "push"],
     "content": "**Terminal (Command Line):**\n```bash\ngit status                 # Check what files you have modified\ngit add .                  # Stage all your modified files\ngit commit -m \"message\"    # Save your changes locally with a note\ngit push                   # Upload your saved changes to GitHub\n```\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Select repository\n3. Add commit message\n4. Click Commit to main\n5. Click Push origin"
   },
   {
-    "id": "q4",
-    "feature": "Create a branch",
-    "description": "How to create a new branch on the Web or GitHub Desktop.",
-    "keywords": ["branch", "create branch", "new branch", "checkout -b"],
-    "content": "**Web:**\n1. Open repository\n2. Click branch dropdown\n3. Type branch name\n4. Click Create branch\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Click Current Branch\n3. Click New Branch\n4. Enter branch name\n5. Click Create Branch"
+    "id": "q14",
+    "feature": "What is a commit?",
+    "description": "Definition of a commit.",
+    "keywords": ["meaning commit", "what is commit", "define commit"],
+    "content": "A commit is a saved snapshot of your project changes."
   },
   {
-    "id": "q5",
-    "feature": "Switch branches",
-    "description": "How to switch to a different branch on the Terminal or GitHub Desktop.",
-    "keywords": ["switch branch", "checkout", "change branch"],
-    "content": "**Terminal (Command Line):**\n```bash\ngit checkout branch-name   # Switches your local code to the branch\n# Or, using the newer command:\n# git switch branch-name\n```\n\n**Desktop:**\n1. Click Current Branch\n2. Select branch"
-  },
-  {
-    "id": "q6",
+    "id": "old_q6",
     "feature": "Push changes",
     "description": "How to push changes to the remote repository on the Terminal or GitHub Desktop.",
     "keywords": ["push", "upload changes", "git push"],
     "content": "**Terminal (Command Line):**\n```bash\n# If you just created the branch locally, you MUST set the upstream tracking:\ngit push -u origin branch-name\n\n# Or, if the branch already exists online:\ngit push origin branch-name\n```\n\n**Desktop:**\n* Click Push origin (or Publish branch)"
   },
   {
-    "id": "q7",
+    "id": "old_q7",
     "feature": "Pull changes",
     "description": "How to fetch and pull updates from the remote repository on the Terminal or GitHub Desktop.",
     "keywords": ["pull", "fetch", "get updates", "git pull", "sync"],
     "content": "**Terminal (Command Line):**\n```bash\ngit pull origin main       # Fetch and merge updates from the remote\n```\n\n**Desktop:**\n1. Click Fetch origin\n2. Click Pull origin"
   },
   {
-    "id": "q8",
+    "id": "q17",
+    "feature": "What is the difference between commit and push?",
+    "description": "Understanding local saves vs remote uploads.",
+    "keywords": ["difference commit push", "commit vs push", "local vs remote"],
+    "content": "**Commit** – saves changes locally on your personal computer.\n**Push** – uploads the saved changes to your public/private GitHub cloud footprint."
+  },
+  {
+    "id": "q18",
+    "feature": "How do I undo the last commit?",
+    "description": "Removing the previous commit via soft reset.",
+    "keywords": ["undo commit", "revert commit", "delete commit", "git reset soft"],
+    "content": "```bash\ngit reset --soft HEAD~1\n```"
+  },
+  {
+    "id": "q19",
+    "feature": "How do I view changes before committing?",
+    "description": "Inspecting current uncommitted files and diffs.",
+    "keywords": ["view changes", "see status", "git diff", "git status", "check modifications"],
+    "content": "```bash\ngit status\ngit diff\n```"
+  },
+  {
+    "id": "q20",
+    "feature": "What is the staging area?",
+    "description": "Definition of Git's staging layer.",
+    "keywords": ["staging area", "what is staging", "stage files"],
+    "content": "The staging area is where you prepare files before committing them."
+  },
+  {
+    "id": "old_q4",
+    "feature": "Create a branch",
+    "description": "How to create a new branch on the Web or GitHub Desktop.",
+    "keywords": ["branch", "create branch", "new branch", "checkout -b"],
+    "content": "**Web:**\n1. Open repository\n2. Click branch dropdown\n3. Type branch name\n4. Click Create branch\n\n**Desktop:**\n1. Open GitHub Desktop\n2. Click Current Branch\n3. Click New Branch\n4. Enter branch name\n5. Click Create Branch"
+  },
+  {
+    "id": "old_q5",
+    "feature": "Switch branches",
+    "description": "How to switch to a different branch on the Terminal or GitHub Desktop.",
+    "keywords": ["switch branch", "checkout", "change branch"],
+    "content": "**Terminal (Command Line):**\n```bash\ngit checkout branch-name   # Switches your local code to the branch\n# Or, using the newer command:\n# git switch branch-name\n```\n\n**Desktop:**\n1. Click Current Branch\n2. Select branch"
+  },
+  {
+    "id": "q23",
+    "feature": "How do I delete a branch?",
+    "description": "Removing a branch locally.",
+    "keywords": ["delete branch", "remove branch", "git branch -d", "trash branch"],
+    "content": "```bash\ngit branch -d branch-name\n```"
+  },
+  {
+    "id": "q24",
+    "feature": "Why use branches?",
+    "description": "The logic behind building features on branches.",
+    "keywords": ["why branch", "purpose of branch", "use cases branch"],
+    "content": "Branches allow you to work on features or test bugs without affecting the stable `main` code."
+  },
+  {
+    "id": "q25",
+    "feature": "What is main vs dev branch?",
+    "description": "Differences between common default branch naming.",
+    "keywords": ["main vs dev", "master vs dev", "branch names"],
+    "content": "**main** – stable production code ready for deployment\n**dev** – development work where active tests take place"
+  },
+  {
+    "id": "q26",
+    "feature": "How do I sync a branch?",
+    "description": "Pulling the latest to a local branch.",
+    "keywords": ["sync branch", "update branch", "pull main"],
+    "content": "```bash\ngit pull origin main\n```"
+  },
+  {
+    "id": "old_q8",
     "feature": "Create a pull request",
     "description": "How to create a pull request (PR) on the Web or GitHub Desktop.",
     "keywords": ["pull request", "pr", "merge code", "propose changes", "create pr"],
     "content": "**Web:**\n1. Push branch\n2. Click Compare & pull request\n3. Add title & description\n4. Click Create pull request\n*(Note: If you don't own the repository but want to contribute, you must click \"Fork\" in the top right corner before doing these steps!)*\n\n**Desktop:**\n1. Push branch\n2. Click Create Pull Request\n3. Complete the request in your browser"
   },
   {
-    "id": "q9",
+    "id": "q28",
+    "feature": "What is a pull request?",
+    "description": "The definition of PRs.",
+    "keywords": ["what is pr", "what is pull request", "pull request meaning"],
+    "content": "A pull request is a formal request to merge your changes into another branch (usually main)."
+  },
+  {
+    "id": "old_q9",
     "feature": "Merge changes",
     "description": "How to merge a pull request on the Web.",
     "keywords": ["merge", "pull request", "combine changes", "merge pr"],
     "content": "**Web:**\n1. Open pull request\n2. Click Merge\n3. Confirm"
   },
   {
-    "id": "q10",
+    "id": "old_q10",
     "feature": "Resolve merge conflicts",
     "description": "How to fix merge conflicts on the Terminal or GitHub Desktop.",
     "keywords": ["merge conflict", "resolve conflicts", "fix conflicts", "git conflict"],
     "content": "**Terminal (Command Line):**\n1. Open conflicted files in your editor (like VS Code).\n2. Fix conflicts (Keep Current, Accept Incoming, or manually remove `<<<<<<<`, `=======`, `>>>>>>>` markers).\n3. Once resolved, run in your terminal:\n```bash\ngit status                 # Verify you have fixed the conflicts\ngit add .                  # Stage the resolved files\ngit commit                 # Complete the merge process\ngit push                   # Upload to GitHub\n```\n\n**Desktop:**\n1. Open repository\n2. Review conflicted files with warning signs\n3. Click Open in editor and fix the conflicts\n4. Click Mark resolved inside GitHub Desktop\n5. Finally, Commit and push"
+  },
+  {
+    "id": "q31",
+    "feature": "How do I review changes?",
+    "description": "Checking PR file diffs before approval.",
+    "keywords": ["review changes", "check code", "code review", "approve changes"],
+    "content": "1. Open pull request\n2. Click Files changed\n3. Add comments or approve"
+  },
+  {
+    "id": "q32",
+    "feature": "What is a draft pull request?",
+    "description": "PR definition of 'DRAFT'.",
+    "keywords": ["draft pr", "wip pr", "work in progress"],
+    "content": "A draft pull request is a PR that is NOT ready to be merged yet, mainly used for requesting early feedback."
+  },
+  {
+    "id": "q33",
+    "feature": "How do I create an issue?",
+    "description": "Logging a task or bug ticket.",
+    "keywords": ["create issue", "new issue", "report bug", "open ticket"],
+    "content": "1. Go to Issues panel\n2. Click New Issue\n3. Submit details"
+  },
+  {
+    "id": "q34",
+    "feature": "How do I assign an issue?",
+    "description": "Selecting an assignee for issues.",
+    "keywords": ["assign issue", "delegate issue", "choose person"],
+    "content": "1. Open issue\n2. Click Assignees\n3. Select user"
+  },
+  {
+    "id": "q35",
+    "feature": "How do I close an issue?",
+    "description": "Marking an issue ticket as successfully fixed/closed.",
+    "keywords": ["close issue", "finish issue", "resolve issue"],
+    "content": "Click the `Close issue` button at the bottom of the issue thread."
+  },
+  {
+    "id": "q36",
+    "feature": "What are labels?",
+    "description": "Tags on GitHub.",
+    "keywords": ["what are labels", "tags", "categories", "color markers"],
+    "content": "Labels are tags used to organize issues visually (e.g., bug, enhancement, feature)."
+  },
+  {
+    "id": "q37",
+    "feature": "How do I link an issue to a pull request?",
+    "description": "Auto-closing ticket mechanics based on pull requests.",
+    "keywords": ["link issue", "close issue automatically", "fixes issue identifier"],
+    "content": "Add this exact syntax in the PR description:\n\n```text\nFixes #issue-number\n```"
+  },
+  {
+    "id": "q38",
+    "feature": "How do I add a collaborator?",
+    "description": "Inviting users to code.",
+    "keywords": ["add collaborator", "invite user", "give access", "team member"],
+    "content": "1. Go to Settings → Collaborators\n2. Add username\n3. Send invite"
+  },
+  {
+    "id": "q39",
+    "feature": "What happens when someone pushes code?",
+    "description": "Effect of teammates changing code.",
+    "keywords": ["someone pushes code", "collaborator push", "team changes"],
+    "content": "The remote branch updates. You can see the changes online and Must pull them to your local repository to maintain sync."
+  },
+  {
+    "id": "q40",
+    "feature": "How do I mention someone?",
+    "description": "Using syntax referencing.",
+    "keywords": ["mention someone", "tag a user", "call a person"],
+    "content": "Type the `@` symbol followed by their username:\n`@username`"
+  },
+  {
+    "id": "q41",
+    "feature": "How do I review teammate code?",
+    "description": "Inspecting teammate pushes via PRs.",
+    "keywords": ["review team", "check teammate", "review code"],
+    "content": "1. Open pull request\n2. Review changes under Files Diff\n3. Comment or approve"
+  },
+  {
+    "id": "q42",
+    "feature": "What is the typical GitHub workflow?",
+    "description": "General life-cycle steps.",
+    "keywords": ["typical workflow", "standard workflow", "normal process", "steps flow"],
+    "content": "1. Clone repository\n2. Create branch\n3. Make changes\n4. Commit\n5. Push\n6. Create pull request\n7. Review and merge"
+  },
+  {
+    "id": "q43",
+    "feature": "How do I work with a team using GitHub?",
+    "description": "Best practices for multi-dev projects.",
+    "keywords": ["team work", "collaborate", "multiple people", "group coding"],
+    "content": "1. Use separate branches\n2. Commit regularly\n3. Create pull requests\n4. Review before merging"
+  },
+  {
+    "id": "q44",
+    "feature": "What is feature branch workflow?",
+    "description": "Definition of feature branch methodology.",
+    "keywords": ["feature branch", "what is feature workflow", "branch logic"],
+    "content": "Each specific feature is developed in its own isolate branch before eventually merging back into main."
+  },
+  {
+    "id": "q45",
+    "feature": "How do I avoid conflicts?",
+    "description": "Preempting merge issues.",
+    "keywords": ["avoid conflicts", "prevent merge issues", "no conflicts"],
+    "content": "1. Pull latest changes before starting work\n2. Use separate branches\n3. Commit frequently"
+  },
+  {
+    "id": "q46",
+    "feature": "When should I pull vs push?",
+    "description": "The difference between the actions timing.",
+    "keywords": ["when pull", "when push", "order of push pull"],
+    "content": "**Pull** → before starting your daily work\n**Push** → after committing fresh changes"
+  },
+  {
+    "id": "q47",
+    "feature": "How do I deploy using GitHub Pages?",
+    "description": "Configuring Pages output.",
+    "keywords": ["deploy", "host website", "github pages", "live site"],
+    "content": "1. Go to repository\n2. Click Settings\n3. Go to Pages\n4. Select branch (main)\n5. Click Save\n6. Your live site URL will appear"
   }
 ]
