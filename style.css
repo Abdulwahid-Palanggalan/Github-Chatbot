@@ -365,6 +365,24 @@ input::placeholder {
     cursor: not-allowed;
 }
 
+/* Light mode header & input area overrides */
+body.light-mode .glass-header {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+body.light-mode .input-area {
+    background: rgba(246, 248, 250, 0.6);
+}
+
+body.light-mode .glass-form {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .faq-btn {
+    background: rgba(246, 248, 250, 0.8);
+    color: var(--accent);
+}
+
 /* Scroll area mobile tweaks */
 @media (max-width: 768px) {
     .app-container {
